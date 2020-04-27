@@ -1,0 +1,62 @@
+<div *ngIf = "!collapse" style="background-image: url(https://images.unsplash.com/uploads/141103282695035fa1380/95cdfeef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60); background-size: cover;">
+<div class = "container" style="height: 100vh;">
+    <div class="row" style = "height: 90%">
+        <div class="col-sm-12 my-auto">
+            <div class="d-flex flex-row-reverse card bg-danger card-block w-75 mx-auto" style="height: 50vh; box-shadow: 5px 10px 8px #888888; justify-content: space-between;">
+                <div class = "my-auto mr-5 d-flex flex-column">
+                    <div class = "my-auto mx-auto"><button class = "btn btn-outline-light">Register</button></div>
+                    <div class = "my-auto mx-auto"><span style="color: aliceblue;">Don't have an account? Register Now!</span></div>
+                </div>
+                <div class="ml-5" style = "align-self: center; width: 50%; height: 70vh">
+                    
+                    <div class = "card bg-light card-block my-auto" style="height: 100%; box-shadow: 5px 10px 8px #888888;">
+                        <h5 class = "mx-auto mt-2 text-muted"> Existing User? </h5>
+                        <h3 class = "mx-auto"> Login </h3>
+                        <form class="my-auto mx-auto" #form = "ngForm" (ngSubmit)="login(form.value)">
+                            <div class="form-group">
+                              <label for="exampleInputEmail1">Email address</label>
+                              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="emailId" ngModel>
+                              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                            </div>
+                            <div class="form-group">
+                              <label for="exampleInputPassword1">Password</label>
+                              <input type="password" class="form-control" id="exampleInputPassword1" name="password" ngModel>
+                            </div>
+                            <div class="form-group form-check">
+                              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                              <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <div class = "row d-flex flex-row" style="justify-content: center; height:10%">
+        <div class= "d-flex flex-column" style="justify-content: center;">
+            <div>Check us out!</div>
+        <div>
+            <button class="pulse"><i class="material-icons md-48" routerLink = 'home'>keyboard_arrow_down</i></button>
+        </div>
+        
+        </div>
+    </div>
+</div>
+</div>
+
+<div *ngIf = "collapse" >
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style= "height: 10vh;">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto mr-5">
+            <li class="nav-item active">
+              <a class="nav-link mr-5" href="#">Login</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Register</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+</div>

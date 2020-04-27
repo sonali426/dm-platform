@@ -1,0 +1,134 @@
+<div>
+  <nav
+    class="navbar navbar-expand-lg navbar-light bg-light"
+    style="height: 10vh; position: fixed; z-index: 9999;"
+    id="navbar"
+  >
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto mr-5">
+        <li class="nav-item active">
+          <a class="nav-link mr-5" href="#">Login</a>
+        </li>
+        <li class="nav-item mr-5 active">
+          <a class="nav-link" href="#">Register</a>
+        </li>
+        <li class="nav-item active">
+          <button
+            (click)="scrollToContact(contact)"
+            [ngClass]="{
+              'nav-link': true,
+              'btn btn-primary contact-active': contactActive,
+              'contact-focus': !contactActive
+            }"
+          >
+            Contact Us
+          </button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div
+    class="main my-auto d-flex flex-column justify-content-center"
+    style="height: 100vh; width: 100%; background-image: url('../../assets/images/home.jpg');background-size:cover"
+  >
+    <div class="row mr-2 ml-2 mt-5" style="height: 80%;">
+      <div class="col-sm-4">
+        <div class="card card-details">
+          <div class="card-body">
+            <div class="card-title">WHAT?</div>
+            <div class="card-text">What we do</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="card card-details">
+          <div class="card-body">
+            <div class="card-title">WHY?</div>
+            <div class="card-text">Why you need us?</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="card-details card">
+          <div class="card-body">
+            <div class="card-title">How?</div>
+            <div class="card-text">How we provide the services?</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div #contact id="contact">
+    <div class="container contact">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="contact-info">
+            <img
+              src="https://image.ibb.co/kUASdV/contact-image.png"
+              alt="image"
+            />
+            <h2>Contact Us</h2>
+            <h4>We would love to hear from you !</h4>
+          </div>
+        </div>
+        <div class="col-md-9">
+          <div class="contact-form">
+            <div class="form-group">
+              <label class="control-label col-sm-2" for="fname"
+                >First Name:</label
+              >
+              <div class="col-sm-10">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="fname"
+                  placeholder="Enter First Name"
+                  name="fname"
+                />
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-sm-2" for="lname"
+                >Last Name:</label
+              >
+              <div class="col-sm-10">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="lname"
+                  placeholder="Enter Last Name"
+                  name="lname"
+                />
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-sm-2" for="email">Email:</label>
+              <div class="col-sm-10">
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="Enter email"
+                  name="email"
+                />
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-sm-2" for="comment"
+                >Comment:</label
+              >
+              <div class="col-sm-10">
+                <textarea class="form-control" rows="5" id="comment"></textarea>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-default">Submit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
